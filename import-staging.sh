@@ -1,9 +1,8 @@
 #! /bin/bash
 host='host'
-user='user'
+user='root'
 password='password'
 dbname='dbname'
-name=$1
 
-mysql -h $host -u $user -p"$password" $dbname < $name
+mysqldump -h $host -u $uer -p"$password" $dbname > db-backups/localhost-db-`date +%Y%m%d-%H%M`.sql
 
